@@ -19,6 +19,6 @@ To backflip, make a circle with pointer finger in a clockwise or counterclockwis
 
 To land, gesture with pointer finger as though left clicking a mouse just like starting to takeoff
 
-Stack
+
 
 Node.js for server Express for web app deployment Faye for publishing and subscribing between leap, server and drone Leap.js for converting leap motions into javascript jQuery for browser displays
