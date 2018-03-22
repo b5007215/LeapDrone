@@ -56,7 +56,7 @@ io.sockets.on('connection', function (socket) {
 		else if (type === 'flip') {
 			console.log('flip');
 			if (flight) {
-				//runAction(client.backFlip);
+				runAction(client.animate, ['flipBehind', 150]);
 			}
 		}
 		// Move drone forward
