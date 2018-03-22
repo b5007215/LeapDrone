@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div id="content">
+		<div id="header">
+			<h1 class="title inline">Gesture Fly</h1>
+			<h2 class="subtitle inline">Featuring AR Drone with total leap motion controls!</h2>
+		</div>
+		<div id="hud">
+			<div id="stream"></div>
+			<div id="drawer"></div>
+		</div>
+	</div>
+	<script src="http://localhost:3001/socket.io/socket.io.js"></script>
+	<script src="/dronestream/nodecopter-client.js"></script>
+	<script src="src/bower_components/leapjs/leap.js"></script>
+	<script src="src/config.js"></script>
+	<script src="src/bower_components/dojo/dojo.js"></script>
+	<script>
+		require([
+			'Leapcopter/Remote',
+			'Leapcopter/Drawer',
+			'Leapcopter/Drone',
+			'dojo/window',
+			'dojo/domReady!'
+		], function (Remote, Drawer, Drone, win) {
+			new NodecopterStream(document.getElementById('stream'));
+			var remote = new Remote(),
+				drone = new Drone({ active: false }),
+				box = win.getBox(),
+				drawer = new Drawer({
+					width: box.w,
+					height: box.h
+				}, 'drawer');
+
+			remote.start();
+		});
+	</script>
+	<!-- <script src="src/main.js"></script> -->
+</body>
+</html>

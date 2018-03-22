@@ -1,0 +1,21 @@
+{
+  "name": "Gesture Fly",
+  "version": "3.1.9",
+  "description": "An AR Drone with leap motion capablities",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "PT-Group",
+  "license": "",
+  "devDependencies": {
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt": "~0.4.2"
+  },
+  "dependencies": {
+    "socket.io": "~0.9.16",
+    "express": "~3.4.7",
+    "dronestream": "~1.1.1",
+    "ar-drone": "git://github.com/felixge/node-ar-drone.git"
+  }
+}
